@@ -1,1 +1,30 @@
-<!---->
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="github"
+           fetch="https://github.com/" />
+
+  <remote  name="gitlab"
+           fetch="https://gitlab.com/" />
+
+  <remote  name="shiki"
+           fetch="https://github.com/ProjectShikigami"
+           revision="14" />
+
+  <remote  name="shiki-devices"
+           fetch="https://github.com/Shikigami-Devices"
+           revision="14" />
+
+  <remote  name="alex"
+           fetch="ssh://git@github.com/Senpaixm1"
+           revision="14" />
+
+  <!-- DerpFest -->
+  <!-- Rootdir -->
+  <project path="art" name="art" groups="pdk" remote="shiki" />
+  <project path="bionic" name="bionic" groups="pdk" remote="shiki" />
+  <project path="development" name="development" groups="developers,pdk-cw-fs,pdk-fs" remote="shiki" />
+  <project path="manifest" name="manifest" remote="derp" />
+
+  <!-- Bootable -->
+  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="shiki" />
