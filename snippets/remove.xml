@@ -2,9 +2,7 @@
 <manifest>
 
   <!-- Rootdir -->
-  <remove-project name="platform/art" />
   <remove-project name="platform/bionic" />
-  <remove-project name="platform/development" />
 
   <!-- Bootable -->
   <remove-project name="platform/bootable/recovery" />
@@ -20,6 +18,7 @@
   <remove-project name="device/generic/arm64" />
   <remove-project name="device/generic/armv7-a-neon" />
   <remove-project name="device/generic/car" />
+  <remove-project name="device/generic/common" />
   <remove-project name="device/generic/mini-emulator-arm64" />
   <remove-project name="device/generic/mini-emulator-armv7-a-neon" />
   <remove-project name="device/generic/mini-emulator-x86" />
@@ -46,20 +45,7 @@
   <remove-project name="device/google/felix" />
   <remove-project name="device/google/felix-kernel" />
   <remove-project name="device/google/felix-sepolicy" />
-  <remove-project name="device/google/redbull" />
-  <remove-project name="device/google/redbull-sepolicy" />
-  <remove-project name="device/google/redbull-kernel" />
-  <remove-project name="device/google/redfin" />
-  <remove-project name="device/google/redfin-sepolicy" />
-  <remove-project name="device/google/shusky" />
-  <remove-project name="device/google/shusky-kernel" />
-  <remove-project name="device/google/shusky-sepolicy" />
-  <remove-project name="device/google/tangorpro" />
-  <remove-project name="device/google/tangorpro-kernel" />
-  <remove-project name="device/google/tangorpro-sepolicy" />
-  <remove-project name="device/google/sunfish" />
-  <remove-project name="device/google/sunfish-kernel" />
-  <remove-project name="device/google/sunfish-sepolicy" />
+  <remove-project name="device/google/gs-common" />
   <remove-project name="device/google/gs101" />
   <remove-project name="device/google/gs101-sepolicy" />
   <remove-project name="device/google/gs201" />
@@ -72,8 +58,24 @@
   <remove-project name="device/google/pantah-sepolicy" />
   <remove-project name="device/google/raviole" />
   <remove-project name="device/google/raviole-kernel" />
+  <remove-project name="device/google/redbull" />
+  <remove-project name="device/google/redbull-kernel" />
+  <remove-project name="device/google/redbull-sepolicy" />
+  <remove-project name="device/google/redfin" />
+  <remove-project name="device/google/redfin-sepolicy" />
+  <remove-project name="device/google/shusky" />
+  <remove-project name="device/google/shusky-kernel" />
+  <remove-project name="device/google/shusky-sepolicy" />
+  <remove-project name="device/google/sunfish" />
+  <remove-project name="device/google/sunfish-kernel" />
+  <remove-project name="device/google/sunfish-sepolicy" />
+  <remove-project name="device/google/tangorpro" />
+  <remove-project name="device/google/tangorpro-kernel" />
+  <remove-project name="device/google/tangorpro-sepolicy" />
   <remove-project name="device/google/trout" />
   <remove-project name="device/google/vrservices" />
+  <remove-project name="device/google/zuma" />
+  <remove-project name="device/google/zuma-sepolicy" />
   <remove-project name="device/linaro/dragonboard" />
   <remove-project name="device/linaro/dragonboard-kernel" />
   <remove-project name="device/linaro/hikey" />
@@ -88,27 +90,34 @@
   <!-- External -->
   <remove-project name="platform/external/avb" />
   <remove-project name="platform/external/cronet" />
-  <remove-project name="platform/external/exfatprogs" />
   <remove-project name="platform/external/dtc" />
+  <remove-project name="platform/external/e2fsprogs" />
+  <remove-project name="platform/external/exfatprogs" />
   <remove-project name="platform/external/gptfdisk" />
+  <remove-project name="platform/external/libcxx" />
   <remove-project name="platform/external/libnl" />
   <remove-project name="platform/external/libvpx" />
   <remove-project name="platform/external/mksh" />
+  <remove-project name="platform/external/setupcompat" />
   <remove-project name="platform/external/tinycompress" />
   <remove-project name="platform/external/webp" />
   <remove-project name="platform/external/wpa_supplicant_8" />
   <remove-project name="platform/external/zstd" />
 
   <!-- Frameworks -->
-  <remove-project name="platform/frameworks/av" />
-  <remove-project name="platform/frameworks/base" />
-  <remove-project name="platform/frameworks/libs/systemui" />
-  <remove-project name="platform/frameworks/native" />
-  <remove-project name="platform/frameworks/opt/colorpicker" />
+  <remove-project name="platform/frameworks/av"/>
+  <remove-project name="platform/frameworks/base"/>
+  <remove-project name="platform/frameworks/native"/>
+  <remove-project name="platform/frameworks/opt/calendar" />
   <remove-project name="platform/frameworks/opt/telephony" />
   <remove-project name="platform/frameworks/opt/timezonepicker" />
 
   <!-- Hardware -->
+  <remove-project name="platform/hardware/broadcom/libbt" />
+  <remove-project name="platform/hardware/google/gchips" />
+  <remove-project name="platform/hardware/google/graphics/common" />
+  <remove-project name="platform/hardware/google/pixel" />
+  <remove-project name="platform/hardware/google/pixel-sepolicy" />
   <remove-project name="platform/hardware/interfaces" />
   <remove-project name="platform/hardware/libhardware" />
   <remove-project name="platform/hardware/qcom/audio" />
@@ -117,36 +126,36 @@
   <remove-project name="platform/hardware/qcom/display" />
   <remove-project name="platform/hardware/qcom/gps" />
   <remove-project name="platform/hardware/qcom/media" />
+  <remove-project name="platform/hardware/qcom/sm7150/gps" />
+  <remove-project name="platform/hardware/qcom/sm7250/gps" />
+  <remove-project name="platform/hardware/qcom/sm8150/gps" />
   <remove-project name="platform/hardware/qcom/wlan" />
   <remove-project name="platform/hardware/ril" />
 
   <!-- Packages -->
-  <remove-project name="platform/packages/apps/Launcher3" />
-  <remove-project name="platform/packages/apps/QuickSearchBox" />
+  <remove-project name="platform/packages/apps/Nfc" />
   <remove-project name="platform/packages/apps/Settings" />
-  <remove-project name="platform/packages/apps/SettingsIntelligence" />
-  <remove-project name="platform/packages/apps/ThemePicker" />
-  <remove-project name="platform/packages/apps/WallpaperPicker2" />
   <remove-project name="platform/packages/modules/adb" />
-  <remove-project name="platform/packages/modules/common" />
   <remove-project name="platform/packages/modules/Bluetooth" />
-  <remove-project name="platform/packages/modules/Connectivity" />
-  <remove-project name="platform/packages/modules/Permission" />
+  <remove-project name="platform/packages/modules/common" />
+  <remove-project name="platform/packages/modules/StatsD" />
   <remove-project name="platform/packages/modules/Wifi" />
-  <remove-project name="platform/packages/providers/DownloadProvider" />
-  <remove-project name="platform/packages/providers/MediaProvider" />
   <remove-project name="platform/packages/services/Telecomm" />
   <remove-project name="platform/packages/services/Telephony" />
 
+  <!-- Prebuilts -->
+  <remove-project name="platform/prebuilts/build-tools" />
+  <remove-project name="platform/prebuilts/clang/host/linux-x86" />
+
   <!-- System -->
-  <remove-project name="platform/system/bpf" />
-  <remove-project name="platform/system/core" />
+  <remove-project name="platform/system/bpf"/>
+  <remove-project name="platform/system/core"/>
   <remove-project name="platform/system/extras" />
+  <remove-project name="platform/system/keymaster" />
   <remove-project name="platform/system/libhidl" />
   <remove-project name="platform/system/libziparchive" />
   <remove-project name="platform/system/logging" />
   <remove-project name="platform/system/media" />
-  <remove-project name="platform/system/netd" />
   <remove-project name="platform/system/security" />
   <remove-project name="platform/system/sepolicy" />
   <remove-project name="platform/system/tools/mkbootimg" />
